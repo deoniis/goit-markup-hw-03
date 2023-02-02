@@ -34,16 +34,47 @@ body {
 a {
     text-decoration: none;
 }
-ul {
+ul,ol  {
     list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+h1,h2,h3,h4,p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 button{
     cursor: pointer;
     font-family: inherit;
 }
- /* site header */
+img {
+    display: block;
+}
+.container {
+    margin: 0 auto;
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: 2px solid tomato;
+}
+
+ /* ------------------------site header -----------------*/
+ 
+
+  
+   
+.page-header {
+    display: flex;
+     padding-top: 24px;
+     padding-bottom: 24px;
+     align-items: center;
+     justify-content: space-between;
+     }
+     
+   
  .logo-link {
-    text-decoration: none;
+    
     font-family: var(--font-secondary);
     font-size: 18px;
     line-height: 1.5
@@ -54,22 +85,44 @@ button{
  .header-studio {
     color: var(--basic-color)
  }
+ /* ------------------main-nav---------------- */
+ 
 
+ .site-nav {
+    display: flex;
+ }
  
  .site-nav .link.current {
+    
     color: var(--color-iris);}
 
+.site-nav .item + .item {
+    margin-left: 40px;
+}
+
+
  .site-nav .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     color: #2E2F42;
     line-height: 1.5;
     font-size: 16px;
     font-weight: 500;
+    
  }
-
+ 
  .site-nav .link:hover,
  .site-nav .link:focus,
  .site-nav .link :active {
      color: var(--color-iris);
+ }
+ .contacts-info {
+    display: flex;
+ }
+ .contacts-info .item + .item {
+    margin-left: 40px;
  }
  
  .contacts-info .link {
@@ -86,18 +139,27 @@ button{
 
 
 
- /* section hero */
+ /* -------------section hero-------------- */
  .hero {
     background-color: var(--basic-color);
+    text-align: center;
    
  }
  .hero-title {
+   
     font-weight: 700;
-    font-size: 56px;
-    line-height: 1.5;
+    font-size: 50px;
+    line-height: 1.07;
     color: #FFFFFF;
-    width: 494px;
     letter-spacing: 0.02em;
+    text-align: center;
+    padding-top: 188px;
+    padding-left: 300px;
+    padding-right: 300px;
+    margin-bottom: 48px;
+   
+    
+
     
  }
  .hero-button {
@@ -108,13 +170,27 @@ button{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    width: 169px;
+    width: 179px;
     height: 56px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 16px 32px;
+    align-items: center;
+    margin-bottom: 188px;
+    margin-left: 479.5px;
+    margin-right: 479.5px;
+
     
-    
-    
+   
  }
- /* feauters section */
+ .hero-button:hover,
+ .hero-button:focus {
+    background-color: #404BBF;
+ }
+ .hero {
+    margin-bottom: 120px;
+ }
+ /* ------------feauters section -----------*/
 
  .feauters-title {
     color: var(--basic-color);
@@ -122,12 +198,17 @@ button{
     font-size: 20px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-bottom: 10px;
     
  }
  .feauters-text {
     color:var(--secondary-color);
-    
+
     line-height: 1.5;
+    
+ }
+ .feauters {
+     margin-bottom: 109px;
  }
 
  /* active */
@@ -137,9 +218,15 @@ button{
      font-size: 36px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 72px;
 }
-/* our team */
+.active {
+    margin-bottom: 131px;
+}
+
+/*------------------- our team -----------------------*/
 .team {
     background-color: var(--color-cloud);
 }
@@ -150,6 +237,9 @@ button{
     font-size: 36px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-bottom: 72px;
+    padding-top: 120px;
+    text-align: center;
 }
 .team-heading {
     color: var(--basic-color);
@@ -157,14 +247,36 @@ button{
         font-size: 20px;
         line-height: 1.5;
         letter-spacing: 0.02em;
+        margin-top: 32px;
+        margin-bottom: 8px;
     }
 .team-text {
     color: var(--secondary-color);
     line-height: 1.5;
+    padding-bottom: 32px;
+
+}
+.team-card {
+    background-color: var(--background-color);
+    width: 264px;
+    height: 380px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    text-align: center;
+    
+
+}
+.team-list {
+    padding-bottom: 120px;
 }
 
-/* PORTFOLIO */
-
+/* -----------PORTFOLIO-------------- */
+.portfolio {
+    margin-top: 96px;
+    margin-bottom: 120px;
+}
+.buttons {
+    margin-bottom: 72px;
+}
 
 .buttons-list {
     border: none;
@@ -174,14 +286,24 @@ button{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    font-family: var(--font-basic)
+    font-family: var(--font-basic);
+    border-radius: 4px;
+    padding: 12px 24px;
+    
     
 }
 .buttons-list:hover,
 .buttons-list:focus {
     background-color: #404BBF;
     color: #FFFFFF;
-
+}
+.portfolio-item {
+    width: 360px;
+    height: 420px;
+    left: 924px;
+    top: 288px;
+    background: #FFFFFF;
+    border: 1px solid #E7E9FC;
 }
 
 .portfolio-title {
@@ -190,21 +312,28 @@ font-weight: 500;
 font-size: 20px;
 line-height: 1.5;
 letter-spacing: 0.02em;
+margin-top: 32px;
+margin-left: 16px;
 }
 .portfolio-text {
  
     line-height: 1.5;
     color: var(--secondary-color);
+    margin-top: 8px;
+    margin-left: 16px;
 }
 /* FOOTER */
 .page-footer {
     background-color: var(--basic-color);
+    padding-top: 100px;
+    
 }
 .page-footer .link {
     font-family: var(--font-secondary);
     font-weight: 800;
     font-size: 18px;
     line-height: 1.5;
+    
     
 }
 .footer-web {
@@ -217,4 +346,8 @@ letter-spacing: 0.02em;
 .footer-text {
     color: #E7E9FC;
     line-height: 1.5;
+    margin-top: 16px;
+    padding-bottom: 100px;
+    padding-right: 800px;
+    
 }
